@@ -2,9 +2,9 @@
 
 ## Descrição
 
-Repositório do front-end feito com Nest.js (Backend)
+Repositório do front-end feito com Golang (Backend)
 
-**Importante**: A aplicação do Apache Kafka, Golang deve estar rodando primeiro.
+**Importante**: A aplicação do Apache Kafka deve estar rodando primeiro.
 
 ## Configurar /etc/hosts
 
@@ -22,10 +22,12 @@ Em todos os sistemas operacionais é necessário abrir o programa para editar o 
 Execute os comandos:
 
 ```
-docker-compose up
+docker-compose up -d
+# Entrar no container
+docker-compose exec app bash
+# Rodar a aplicação Golang
+go run main.go
 ```
-
-Acessar http://localhost:3000/routes.
 
 ### Para Windows 
 
